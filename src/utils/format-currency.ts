@@ -19,13 +19,19 @@ export const formatCurrency = (value: number, options: FormatOptions = {}) => {
     currencyDisplay: display,
   });
 
-  // Vi bruger formatToParts for at give Design Engineer'en fuld kontrol over UI
   const parts = formatter.formatToParts(value);
 
   return {
     full: formatter.format(value),
     parts: parts,
-    // Hjælpe-metode til at finde specifikke dele (fx til mindre skrift på øre/cents)
+    integer: parts
+      .filter(p => p.type === 'integer' || p.type === 'group')
+      .map(p => p.value)
+      .join(''),
+    decimal: parts.find(p => p.type === 'decimal')?.value || '',
+    fraction: parts.find(p => p.type === 'fraction')?.value || '',
+    currency: parts.find(p => p.type === 'currency')?.value || '',
+    sign: parts.find(p => p.type === 'minusSign' || p.type === 'plusSign')?.value || '',
     getPart: (type: Intl.NumberFormatPartTypes) =>
       parts.find(p => p.type === type)?.value || ''
   };

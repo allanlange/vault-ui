@@ -1,0 +1,26 @@
+# Vault-UI Project Rules
+
+## Tech Stack
+- Framework: React with TanStack Start.
+- Styling: Pure CSS Modules only (NO Tailwind, NO Bootstrap).
+- Icons: Lucide React.
+
+## CSS Guidelines
+- Use CSS Variables from `src/styles/variables.css` for all tokens.
+- Every component must have a corresponding `.module.css`.
+- Ensure `.d.ts` files are generated for all CSS modules.
+- Use `font-variant-numeric: tabular-nums` for financial data.
+
+## TypeScript
+- Strict typing for all props.
+- Use the `formatCurrency` utility for all monetary displays.
+- Use 'signals' from '@preact/signals-react' over 'useState' and 'useEffect' where possible.
+
+## Project Structure
+- src/
+  - components/
+  - routes/
+  - styles/
+  - utils/
+  - hooks/
+  - types/

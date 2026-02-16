@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { CurrencyDisplay } from '../components/currency-display';
+import { BalanceCard } from '../components/balance-card/balance-card';
 
 export const Route = createFileRoute('/dashboard')({
   //loader: async () => fetchAccountBalance(), // Din API funktion
@@ -13,6 +13,7 @@ function DashboardComponent() {
     <div className="p-6">
       <h1 className="text-sm text-slate-500 uppercase tracking-wider">Total Balance</h1>
       {/* <CurrencyDisplay amount={data.balance} /> */}
+      <BalanceCard amount={data?.balance || 2500} />
     </div>
   );
 }

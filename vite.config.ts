@@ -12,6 +12,10 @@ export default defineConfig({
         tsConfigPaths(),
         tanstackStart(),
         // react's vite plugin must come after start's vite plugin
-        viteReact(),
+        viteReact({
+            babel: {
+                plugins: [['module:@preact/signals-react-transform']],
+            },
+        }),
     ],
 })
