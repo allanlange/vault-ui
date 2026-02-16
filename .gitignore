@@ -1,0 +1,4 @@
+node_modules/
+*.module.css.d.ts
+dist/
+.tanstack/

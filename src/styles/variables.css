@@ -1,0 +1,53 @@
+:root {
+  /* --- 1. PRIMITIVES (Base colors) --- */
+  --raw-slate-50: #f8fafc;
+  --raw-slate-900: #0f172a;
+  --raw-blue-600: #2563eb;
+  --raw-emerald-500: #10b981;
+  --raw-red-500: #ef4444;
+
+  /* --- 2. SEMANTIC TOKENS (The Logic) --- */
+  /* Backgrounds */
+  --color-bg-app: var(--raw-slate-50);
+  --color-bg-surface: #ffffff;
+  --color-border: rgba(15, 23, 42, 0.1);
+
+  /* Content */
+  --color-text-main: var(--raw-slate-900);
+  --color-text-muted: #64748b;
+
+  /* Financial Status */
+  --color-trend-up: var(--raw-emerald-500);
+  --color-trend-down: var(--raw-red-500);
+  --color-action: var(--raw-blue-600);
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-data: 'JetBrains Mono', monospace;
+  /* For figures/numbers */
+
+  /* Spacing System */
+  --space-unit: 4px;
+  --space-1: calc(var(--space-unit) * 1);
+  /* 4px */
+  --space-2: calc(var(--space-unit) * 2);
+  /* 8px */
+  --space-4: calc(var(--space-unit) * 4);
+  /* 16px */
+}
+
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --color-bg-app: #020617;
+  --color-bg-surface: #0f172a;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+
+  --color-trend-up: #34d399;
+  --color-trend-down: #f87171;
+}
