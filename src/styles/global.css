@@ -1,0 +1,24 @@
+/* 
+The @import in global.css is good practice because:
+- It ensures dependencies are explicit.
+- It guarantees variables.css loads before other styles (preserving cascade order).
+- It allows tools (like IDE intellisense) to know where the variables come from. 
+*/
+@import './variables.css';
+
+:root {
+    font-family: var(--font-main);
+    line-height: 1.5;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-app);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}

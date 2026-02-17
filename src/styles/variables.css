@@ -1,29 +1,69 @@
 :root {
   /* --- 1. PRIMITIVES (Base colors) --- */
   --raw-slate-50: #f8fafc;
+  --raw-slate-100: #f1f5f9;
+  --raw-slate-200: #e2e8f0;
+  --raw-slate-300: #cbd5e1;
+  --raw-slate-800: #1e293b;
   --raw-slate-900: #0f172a;
+  --raw-slate-950: #020617;
+
+  --raw-blue-50: #eff6ff;
+  --raw-blue-100: #dbeafe;
   --raw-blue-600: #2563eb;
+  --raw-blue-700: #1d4ed8;
+
+  --raw-emerald-50: #ecfdf5;
+  --raw-emerald-100: #d1fae5;
   --raw-emerald-500: #10b981;
+  --raw-emerald-600: #059669;
+
+  --raw-red-50: #fef2f2;
+  --raw-red-100: #fee2e2;
   --raw-red-500: #ef4444;
+  --raw-red-600: #dc2626;
 
   /* --- 2. SEMANTIC TOKENS (The Logic) --- */
   /* Backgrounds */
   --color-bg-app: var(--raw-slate-50);
   --color-bg-surface: #ffffff;
+  --color-bg-subtle: var(--raw-slate-100);
+  --color-bg-muted: var(--raw-slate-200);
+  --color-bg-inverse: var(--raw-slate-900);
+
+  --color-bg-trend-up-subtle: var(--raw-emerald-50);
+  --color-bg-trend-down-subtle: var(--raw-red-50);
+  --color-bg-action-subtle: var(--raw-blue-50);
+
   --color-border: rgba(15, 23, 42, 0.1);
+  --color-border-hover: rgba(15, 23, 42, 0.2);
+  --color-border-active: var(--raw-blue-600);
 
   /* Content */
   --color-text-main: var(--raw-slate-900);
   --color-text-muted: #64748b;
+  --color-text-inverse: #f8fafc;
 
-  /* Financial Status */
-  --color-trend-up: var(--raw-emerald-500);
-  --color-trend-down: var(--raw-red-500);
+  /* Financial Status (Text/Icons) */
+  --color-trend-up: var(--raw-emerald-600);
+  --color-trend-down: var(--raw-red-600);
   --color-action: var(--raw-blue-600);
 
   /* Elevation */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-sm:
+    0px 0.6px 0.7px rgba(15, 23, 42, 0.05),
+    0px 1.2px 1.4px -1px rgba(15, 23, 42, 0.05);
+
+  --shadow-md:
+    0px 1.1px 1.2px rgba(15, 23, 42, 0.05),
+    0px 3.8px 4.3px -0.6px rgba(15, 23, 42, 0.05),
+    0px 9px 10.1px -1.2px rgba(15, 23, 42, 0.05);
+
+  --shadow-lg:
+    0px 1.3px 1.5px rgba(15, 23, 42, 0.04),
+    0px 4.4px 5px -0.4px rgba(15, 23, 42, 0.04),
+    0px 10.6px 12px -0.8px rgba(15, 23, 42, 0.04),
+    0px 24.1px 27.2px -1.2px rgba(15, 23, 42, 0.04);
 
   /* Typography */
   --font-main: 'Inter', system-ui, sans-serif;
@@ -32,22 +72,76 @@
 
   /* Spacing System */
   --space-unit: 4px;
+  --space-0_5: calc(var(--space-unit) * 0.5);
+  /* 2px */
   --space-1: calc(var(--space-unit) * 1);
   /* 4px */
+  --space-1_5: calc(var(--space-unit) * 1.5);
+  /* 6px */
   --space-2: calc(var(--space-unit) * 2);
   /* 8px */
+  --space-2_5: calc(var(--space-unit) * 2.5);
+  /* 10px */
+  --space-3: calc(var(--space-unit) * 3);
+  /* 12px */
   --space-4: calc(var(--space-unit) * 4);
   /* 16px */
+  --space-5: calc(var(--space-unit) * 5);
+  /* 20px */
+  --space-6: calc(var(--space-unit) * 6);
+  /* 24px */
+  --space-8: calc(var(--space-unit) * 8);
+  /* 32px */
+  --space-10: calc(var(--space-unit) * 10);
+  /* 40px */
+  --space-12: calc(var(--space-unit) * 12);
+  /* 48px */
+  --space-16: calc(var(--space-unit) * 16);
+  /* 64px */
+  --space-20: calc(var(--space-unit) * 20);
+  /* 80px */
+  --space-24: calc(var(--space-unit) * 24);
+  /* 96px */
+  --space-32: calc(var(--space-unit) * 32);
+  /* 128px */
 }
 
 /* Dark Mode Overrides */
 [data-theme='dark'] {
-  --color-bg-app: #020617;
-  --color-bg-surface: #0f172a;
+  --color-bg-app: var(--raw-slate-950);
+  --color-bg-surface: var(--raw-slate-900);
+  --color-bg-subtle: var(--raw-slate-800);
+  --color-bg-muted: #334155;
+  --color-bg-inverse: #f8fafc;
+
+  --color-bg-trend-up-subtle: rgba(16, 185, 129, 0.1);
+  --color-bg-trend-down-subtle: rgba(239, 68, 68, 0.1);
+  --color-bg-action-subtle: rgba(37, 99, 235, 0.1);
+
   --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
   --color-text-main: #f8fafc;
   --color-text-muted: #94a3b8;
+  --color-text-inverse: var(--raw-slate-900);
 
   --color-trend-up: #34d399;
   --color-trend-down: #f87171;
+  --color-action: #60a5fa;
+
+  /* Elevation (Dark Mode - Stronger shadows) */
+  --shadow-sm:
+    0px 0.6px 0.7px rgba(0, 0, 0, 0.4),
+    0px 1.2px 1.4px -1px rgba(0, 0, 0, 0.4);
+
+  --shadow-md:
+    0px 1.1px 1.2px rgba(0, 0, 0, 0.4),
+    0px 3.8px 4.3px -0.6px rgba(0, 0, 0, 0.4),
+    0px 9px 10.1px -1.2px rgba(0, 0, 0, 0.4);
+
+  --shadow-lg:
+    0px 1.3px 1.5px rgba(0, 0, 0, 0.4),
+    0px 4.4px 5px -0.4px rgba(0, 0, 0, 0.4),
+    0px 10.6px 12px -0.8px rgba(0, 0, 0, 0.4),
+    0px 24.1px 27.2px -1.2px rgba(0, 0, 0, 0.4);
 }

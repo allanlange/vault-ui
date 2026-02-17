@@ -10,6 +10,11 @@
 - Every component must have a corresponding `.module.css`.
 - Ensure `.d.ts` files are generated for all CSS modules.
 - Use `font-variant-numeric: tabular-nums` for financial data.
+- Use `gap` instead of `margin` for spacing between elements.
+- Use `padding-block` and `padding-inline` instead of `padding` for spacing between elements.
+- Use `flex` and `grid` for layout.
+- Use `box-sizing: border-box` for all elements.
+- Use nested selectors in CSS modules.
 
 ## TypeScript
 - Strict typing for all props.
